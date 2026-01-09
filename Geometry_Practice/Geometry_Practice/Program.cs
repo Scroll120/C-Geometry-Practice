@@ -23,7 +23,11 @@ namespace Geometry_Practice
 
             while (isRunning) {
                 showMenu();
-                int option = int.Parse(Console.ReadLine());
+                int option;
+                while (!int.TryParse(Console.ReadLine(), out option))
+                {
+                    Console.Write("Invalid input. Please enter a number: ");
+                }
 
                 switch (option) {
                     case 1:

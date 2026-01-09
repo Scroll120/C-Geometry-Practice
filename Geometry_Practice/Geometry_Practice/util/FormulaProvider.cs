@@ -14,7 +14,7 @@ namespace Geometry_Practice.util
             switch (shape)
             {
                 case "Circle":
-                    return "π×r×r";
+                    return "PI×r×r";
                 case "Rectangle":
                     return "a×b";
                 case "Triangle":
@@ -34,7 +34,7 @@ namespace Geometry_Practice.util
             switch (shape)
             {
                 case "Circle":
-                    return "2×π×r";
+                    return "2×PI×r";
                 case "Rectangle":
                     return "2×a + 2×b";
                 case "Triangle":
