@@ -15,17 +15,17 @@ namespace Geometry_Practice.shapes
         }
         public override double calculateAre()
         {
-            throw new NotImplementedException();
+            return (1 / 4.0) * Math.Sqrt(5 * (5 + 2 * Math.Sqrt(5))) * side * side;
         }
 
         public override double calculatePerimeter()
         {
-            throw new NotImplementedException();
+            return side * 5;
         }
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Pentagon [side=" + side + "]";
         }
     }
 }
