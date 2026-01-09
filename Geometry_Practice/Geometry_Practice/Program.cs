@@ -1,5 +1,6 @@
 ﻿using Geometry_Practice.containers;
 using Geometry_Practice.shapes;
+using Geometry_Practice.util;
 using System.Text;
 
 namespace Geometry_Practice
@@ -177,11 +178,39 @@ namespace Geometry_Practice
         }
 
         private static void showFormulas() {
-            throw new NotImplementedException();
+            Console.WriteLine("Choose a shape to see formulas:");
+            Console.WriteLine("1. Circle");
+            Console.WriteLine("2. Rectangle");
+            Console.WriteLine("3. Triangle");
+            Console.WriteLine("4. Square");
+            Console.WriteLine("5. Equilateral Triangle");
+            Console.WriteLine("6. Regular Pentagon");
+
+            int shapeChoice = int.Parse(Console.ReadLine());
+            string shapeName = getShapeNameByChoice(shapeChoice);
+
+            if (!string.IsNullOrEmpty(shapeName))
+            {
+                Console.WriteLine($"{shapeName} area formula: {FormulaProvider.getAreaForShape(shapeName)}");
+                Console.WriteLine($"{shapeName} perimeter formula: {FormulaProvider.getPerimeterForShape(shapeName)}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid shape choice.");
+            }
         }
 
         private static String getShapeNameByChoice(int shapeChoice) {
-            throw new NotImplementedException();
+            return shapeChoice switch
+            {
+                1 => "Circle",
+                2 => "Rectangle",
+                3 => "Triangle",
+                4 => "Square",
+                5 => "EquilateralTriangle",
+                6 => "RegularPentagon",
+                _ => string.Empty
+            };
         }
 
     }
