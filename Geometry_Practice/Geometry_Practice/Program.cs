@@ -102,12 +102,12 @@ namespace Geometry_Practice
 
                 case 4:
                     Console.Write("Enter side length: ");
-                    shapes.add(new Square(double.Parse(Console.ReadLine())));
+                    shapes.addShape(new Square(double.Parse(Console.ReadLine())));
                     break;
 
                 case 5:
                     Console.Write("Enter side length: ");
-                    shapes.ad(new EquilateralTriangle(double.Parse(Console.ReadLine())));
+                    shapes.addShape(new EquilateralTriangle(double.Parse(Console.ReadLine())));
                     break;
 
                 case 6:
@@ -122,7 +122,30 @@ namespace Geometry_Practice
         }
 
         private static void showAllShapes(ShapeCollection shapes) {
-            throw new NotImplementedException();
+            string[,] table = shapes.getShapeTable();
+
+            int rows = table.GetLength(0);
+            int cols = table.GetLength(1);
+
+            int[] columnWidths = new int[cols];
+
+            for (int c = 0; c < cols; c++) {
+                for (int r = 0; r < rows; r++) {
+                    columnWidths[c] = Math.Max(columnWidths[c], table[r,c].Length);
+                }
+            }
+
+            printSeparators(columnWidths);
+
+            for (int r = 0; r < rows; r++) {
+                for (int c = 0; c < cols; c++) {
+                    Console.Write($"| {table[r, c].PadRight(columnWidths[c])} ");
+                }
+                Console.WriteLine("|");
+                printSeparators(columnWidths);
+                }
+
+            Thread.Sleep(1500);
         }
 
         private static string printSeparators(int[] columnWidth) {
