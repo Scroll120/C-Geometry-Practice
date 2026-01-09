@@ -148,10 +148,10 @@ namespace Geometry_Practice
             Thread.Sleep(1500);
         }
 
-        private static string printSeparators(int[] columnWidth) {
+        private static void printSeparators(int[] columnWidth) {
             Console.Write("+");
-            foreach (int width in columnWidths)
-            {
+
+            foreach (int width in columnWidth) {
                 Console.Write(new string('-', width + 2));
                 Console.Write("+");
             }
@@ -159,11 +159,21 @@ namespace Geometry_Practice
         }
 
         private static void showLargestShapeByPerimeter(ShapeCollection shapes) {
-            throw new NotImplementedException();
+            Shape largest = shapes.getLargestShapeByPerimeter();
+            Console.WriteLine(
+                largest != null
+                    ? $"Shape with the largest perimeter: {largest}"
+                    : "No shapes in the collection."
+            );
         }
 
         private static void showLargestShapeByArea(ShapeCollection shapes) {
-            throw new NotImplementedException();
+            Shape largest = shapes.getLargestShapeByArea();
+            Console.WriteLine(
+                largest != null
+                    ? $"Shape with the largest area: {largest}"
+                    : "No shapes in the collection."
+            );
         }
 
         private static void showFormulas() {
