@@ -58,8 +58,11 @@ namespace Geometry_Practice.containers
             return largestShape;
         }
 
-        public Shape getLargestShapeByArea() {
-            throw new NotImplementedException();
+        public Shape getLargestShapeByArea()
+        {
+            return shapes.Count == 0
+                ? null
+                : shapes.MaxBy(s => s.calculateAre());
         }
     }
 }
