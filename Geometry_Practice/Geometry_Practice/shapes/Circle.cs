@@ -26,7 +26,7 @@ namespace Geometry_Practice.shapes
 
         public override string ToString()
         {
-            return "Circle [radius=" + radius + "]";
+            return "Circle [radius=" + r + "]";
         }
     }
 }

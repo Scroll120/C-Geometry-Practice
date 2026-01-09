@@ -8,7 +8,7 @@ namespace Geometry_Practice.shapes
 {
     internal class Square : Rectangle
     {
-        public Square(double side) : base(side, side) { };
+        public Square(double side) : base(side, side) { }
 
         public override string ToString()
         {
