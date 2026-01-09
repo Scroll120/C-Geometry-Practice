@@ -149,7 +149,13 @@ namespace Geometry_Practice
         }
 
         private static string printSeparators(int[] columnWidth) {
-            throw new NotImplementedException();
+            Console.Write("+");
+            foreach (int width in columnWidths)
+            {
+                Console.Write(new string('-', width + 2));
+                Console.Write("+");
+            }
+            Console.WriteLine();
         }
 
         private static void showLargestShapeByPerimeter(ShapeCollection shapes) {
