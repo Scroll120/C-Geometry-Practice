@@ -54,7 +54,15 @@ namespace Geometry_Practice
         }
 
         private static void showMenu() {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("Main Menu:");
+            Console.WriteLine("1. Add new shape");
+            Console.WriteLine("2. Show all shapes");
+            Console.WriteLine("3. Show shape with the largest perimeter");
+            Console.WriteLine("4. Show shape with the largest area");
+            Console.WriteLine("5. Show formulas");
+            Console.WriteLine("0. Exit");
+            Console.Write("Select an option: ");
         }
 
         private static void addNewShape(ShapeCollection shapes) {
