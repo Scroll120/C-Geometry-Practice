@@ -12,7 +12,7 @@ namespace Geometry_Practice.shapes
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Square [side=" + getLength() + "]"; 
         }
     }
 }

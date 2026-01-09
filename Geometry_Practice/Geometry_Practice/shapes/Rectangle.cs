@@ -16,6 +16,8 @@ namespace Geometry_Practice.shapes
             this.width = width;
         }
 
+        public double getLength() { return length; }
+
         public override double calculateAre()
         {
             return length * width;
