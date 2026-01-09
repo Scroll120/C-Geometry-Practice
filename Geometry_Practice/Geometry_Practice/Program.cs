@@ -66,7 +66,59 @@ namespace Geometry_Practice
         }
 
         private static void addNewShape(ShapeCollection shapes) {
-            throw new NotImplementedException();
+            Console.WriteLine("Choose a shape to add:");
+            Console.WriteLine("1. Circle");
+            Console.WriteLine("2. Rectangle");
+            Console.WriteLine("3. Triangle");
+            Console.WriteLine("4. Square");
+            Console.WriteLine("5. Equilateral Triangle");
+            Console.WriteLine("6. Regular Pentagon");
+
+            int shapeChoice = int.Parse(Console.ReadLine());
+
+            switch (shapeChoice) {
+                case 1:
+                    Console.Write("Enter radius: ");
+                    shapes.addShape(new Circle(double.Parse(Console.ReadLine())));
+                    break;
+
+                case 2:
+                    Console.Write("Enter width: ");
+                    double width = double.Parse(Console.ReadLine());
+                    Console.Write("Enter height: ");
+                    double height = double.Parse(Console.ReadLine());
+                    shapes.addShape(new Rectangle(width, height));
+                    break;
+
+                case 3:
+                    Console.Write("Enter side a: ");
+                    double a = double.Parse(Console.ReadLine());
+                    Console.Write("Enter side b: ");
+                    double b = double.Parse(Console.ReadLine());
+                    Console.Write("Enter side c: ");
+                    double c = double.Parse(Console.ReadLine());
+                    shapes.addShape(new Triangle(a, b, c));
+                    break;
+
+                case 4:
+                    Console.Write("Enter side length: ");
+                    shapes.add(new Square(double.Parse(Console.ReadLine())));
+                    break;
+
+                case 5:
+                    Console.Write("Enter side length: ");
+                    shapes.ad(new EquilateralTriangle(double.Parse(Console.ReadLine())));
+                    break;
+
+                case 6:
+                    Console.Write("Enter side length: ");
+                    shapes.addShape(new RegularPentagon(double.Parse(Console.ReadLine())));
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid shape choice.");
+                    break;
+            }
         }
 
         private static void showAllShapes(ShapeCollection shapes) {
