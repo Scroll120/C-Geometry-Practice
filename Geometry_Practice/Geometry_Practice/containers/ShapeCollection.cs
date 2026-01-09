@@ -42,8 +42,22 @@ namespace Geometry_Practice.containers
         }
 
         public Shape getLargestShapeByPerimeter() {
-            throw new NotImplementedException();
+            if (shapes.Count == 0) return null;
+
+            Shape largestShape = shapes[0];
+            double maxPerimeter = largestShape.calculatePerimeter();
+
+            foreach (Shape shape in shapes) {
+                double perimter = shape.calculatePerimeter();
+                if (perimter > maxPerimeter) {
+                    largestShape = shape;
+                    maxPerimeter = perimter;
+                }
+            }
+
+            return largestShape;
         }
+
         public Shape getLargestShapeByArea() {
             throw new NotImplementedException();
         }
