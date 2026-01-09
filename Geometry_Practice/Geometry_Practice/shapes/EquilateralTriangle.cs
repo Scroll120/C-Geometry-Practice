@@ -13,17 +13,18 @@ namespace Geometry_Practice.shapes
 
         public override double calculateAre()
         {
-            throw new NotImplementedException();
+            double side = getA();
+            return (Math.Sqrt(3) / 4) * side * side;
         }
 
         public override double calculatePerimeter()
         {
-            throw new NotImplementedException();
+            return 3 * getA();
         }
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "EquilateralTriangle [side=" + getA() + "]";
         }
     }
 }

@@ -16,18 +16,20 @@ namespace Geometry_Practice.shapes
             this.width = width;
         }
 
+        public double getLength() { return length; }
+
         public override double calculateAre()
         {
-            throw new NotImplementedException();
+            return length * width;
         }
 
         public override double calculatePerimeter()
         {
-            throw new NotImplementedException();
+            return 2 * (length + width);
         }
 
         public override string ToString() {
-            throw new NotImplementedException();
+            return "Rectangle [length= " + length + ", width=" + width + "]";
         }
     }
 }

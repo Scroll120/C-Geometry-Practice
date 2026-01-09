@@ -23,17 +23,18 @@ namespace Geometry_Practice.shapes
 
         public override double calculateAre()
         {
-            throw new NotImplementedException();
+            double s = (a + b + c) / 2;
+            return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
         }
 
         public override double calculatePerimeter()
         {
-            throw new NotImplementedException();
+            return a + b + c;
         }
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Triangle [a=" + a + ", b=" + b + ", c=" + c + "]";
         }
     }
 }

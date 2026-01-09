@@ -16,17 +16,17 @@ namespace Geometry_Practice.shapes
         }
         public override double calculateAre()
         {
-            throw new NotImplementedException();
+            return Math.PI * r * r;
         }
 
         public override double calculatePerimeter()
         {
-            throw new NotImplementedException();
+            return 2 * Math.PI * r;
         }
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Circle [radius=" + r + "]";
         }
     }
 }
