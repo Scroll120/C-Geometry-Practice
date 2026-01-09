@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Geometry_Practice.shapes
 {
-    internal class Shape
-    {
+    internal abstract class Shape{
+
+        public abstract double calculateAre();
+
+        public abstract double calculatePerimeter();
+
     }
 }

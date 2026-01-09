@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Geometry_Practice.shapes
 {
-    internal class Square
+    internal class Square : Rectangle
     {
+        public Square(double side) : base(side, side) { };
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
